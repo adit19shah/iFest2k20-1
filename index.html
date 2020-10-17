@@ -2,10 +2,15 @@
 <html>
   <head>
     <!-- Global site tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162398295-5"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162398295-5"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'UA-162398295-5');
@@ -13,7 +18,8 @@
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Home Page</title>
+    <title>i.Fest '20 | Home Page</title>
+    <link rel="icon" href="./images/i.Fest_logo_newWhite.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -22,11 +28,11 @@
       href="./style/style.css"
     />
     <link
-    rel="stylesheet"
-    type="text/css"
-    media="screen"
-    href="./style/mobilestyles.css"
-  />
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./style/mobilestyles.css"
+    />
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
     <link
@@ -104,17 +110,20 @@
       <div id="red" class="fullpage fullpage-scroll" data-section-name="home">
         <div id="wrapper" class="wrapper">
           <div class="main-agile">
-            <img class="logo" id="mainLogo" src="images/i.Fest_logo_newWhite.png" />
+            <img
+              class="logo"
+              id="mainLogo"
+              src="images/i.Fest_logo_newWhite.png"
+            />
           </div>
-          
-          
+
           <input
             type="checkbox"
             id="navcheck"
             role="button"
             title="menu"
             style="z-index: 20"
-          /> 
+          />
 
           <label for="navcheck" aria-hidden="true" title="menu">
             <span class="burger">
@@ -122,15 +131,15 @@
                 <span class="visuallyhidden">Menu</span>
               </span>
             </span>
-          </label> 
+          </label>
 
           <nav id="menu" style="z-index: 20">
             <a href="./index.html">Home</a>
             <a href="./event/event.html">Events</a>
             <!--<a href="./workshops.html">Workshops</a>-->
             <a href="./team.html">Team</a>
-            <a href="https://ifestbackend.herokuapp.com/#/login">Login</a>
-            <a href="./register.html">Register</a>
+            <!-- <a href="https://ifestbackend.herokuapp.com/#/login">Login</a>
+            <a href="./register.html">Register</a> -->
             <a href="./sponsors.html">Sponsors</a>
             <a href="./gallery.html">Gallery</a>
             <a href="./contactUs.html">Contact Us</a>
@@ -151,7 +160,7 @@
                 ></a>
               </li>
             </ul>
-          </nav> 
+          </nav>
 
           <!-- Pop up icons -->
           <div class="container">
@@ -308,7 +317,7 @@
 
           <div class="fraza fade">
             <div class="synapse__logo">
-              <br><br>
+              <br /><br />
               <img
                 src="./home/VirtualVoyageWhite.png"
                 style="max-width: 100%"
@@ -337,10 +346,10 @@
                 </li>
               </ul>
             </div>
-            <br><br>
+            <br /><br />
             <a href="http://ifest.daiict.ac.in/tic-tech-toe" target="_blank">
-              <img id="tictechtoelogo" src="images/tictechtoelogo.png" align="center" >
-          </a>
+              <img id="tictechtoelogo" src="images/tictechtoelogo.png" />
+            </a>
           </div>
         </div>
       </div>
@@ -355,7 +364,8 @@
             </div> -->
 
         <div class="about-us-heading">
-          <h1 style="color: #fff">About Us</h1>
+          <!-- <h1 style="color: #fff">About Us</h1> -->
+          <img src="./images/AboutUs.png" alt="" />
         </div>
 
         <div>
@@ -383,13 +393,10 @@
         class="fullpage fullpage-scroll"
         data-section-name="tic-tech-toe"
       >
-         <!--<div class="aboutuswrapper">
+        <!--<div class="aboutuswrapper">
                 <div class="clip-text clip-text_six" id="aboutImage"><img src="./home/about.jpg"></div>
             </div> -->
-
-        
-          <img src="images/TicTechToePoster.png" height="100%" width="100%" align="center" style="margin:auto 0px">
-       
+        <div class="img-wrap"><img src="images/TicTechToePoster.png" /></div>
       </div>
 
       <!-- Till -->
@@ -427,14 +434,22 @@
                   +91 9714533000</p>
                 <p>Madhav Choksi: <br> 
                   +91 9427772012</p>-->
-                <p>Devyani Panchal: <br> 
-                  +91 9824413747</p>
-                <p>Visaj Shah: <br>
-                  +91 8141764794</p>
-                <p>Karan Bhatia: <br>
-                  +91 8200501205</p>
-                <p style="letter-spacing: 2px;">
-                  IEEE SB DAIICT, Faculty Building 1,<br> DA-IICT Campus Near Indroda Circle Gandhinagar,<br> Gujarat - 382007
+                <p>
+                  Devyani Panchal: <br />
+                  +91 9824413747
+                </p>
+                <p>
+                  Visaj Shah: <br />
+                  +91 8141764794
+                </p>
+                <p>
+                  Karan Bhatia: <br />
+                  +91 8200501205
+                </p>
+                <p style="letter-spacing: 2px">
+                  IEEE SB DAIICT, Faculty Building 1,<br />
+                  DA-IICT Campus Near Indroda Circle Gandhinagar,<br />
+                  Gujarat - 382007
                 </p>
                 <!-- <h2
                   style="
@@ -453,7 +468,9 @@
 
               <ul class="social-media">
                 <li>
-                  <a href="https://www.facebook.com/ifestdaiict/" target="_blank"
+                  <a
+                    href="https://www.facebook.com/ifestdaiict/"
+                    target="_blank"
                     ><i class="fa fa-facebook" aria-hidden="true"></i
                   ></a>
                 </li>
