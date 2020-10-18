@@ -1,320 +1,266 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>i.Fest '20 | Team</title>
     <link rel="icon" href="./images/i.Fest_logo_new.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./style/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./style/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
 
     <script type="text/javascript" src="./js/nav.js"></script>
 
     <style>
-        /* Team Page */
-        
-        .page-title {
-            text-align: center;
-            width: 100%;
-            height: 20%;
-        }
-        
-        .page-title i {
-            color: #fff;
-            font-size: 30px;
-            position: absolute;
-            left: 5%;
-            top: 7%;
-        }
-        
-        .page-title i:hover {
-            opacity: 0.7;
-        }
-        
-        .page-title h1 {
-            padding: 35px;
-            font-size: 40px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-        }
-        
-        .cont-grid {
-            margin: 0px 0 0 0;
-            padding: 0px 0px 0px 0px;
-            list-style: none;
-            display: block;
-            text-align: center;
-            width: 100%;
-        }
-        
+      /* Team Page */
+
+      .page-title {
+        text-align: center;
+        width: 100%;
+        height: 20%;
+      }
+
+      .page-title i {
+        color: #fff;
+        font-size: 30px;
+        position: absolute;
+        left: 5%;
+        top: 7%;
+      }
+
+      .page-title i:hover {
+        opacity: 0.7;
+      }
+
+      .page-title h1 {
+        padding: 35px;
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+      }
+
+      .cont-grid {
+        margin: 0px 0 0 0;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+
+      .cont-grid li {
+        width: 250px;
+        height: 250px;
+        display: inline-block;
+        margin: 50px 50px;
+      }
+
+      .user {
+        color: white;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: relative;
+        cursor: default;
+      }
+
+      .cont-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .cont-image img {
+        width: 100%;
+        height: 100%;
+        /* border-radius: 10%; */
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.3);
+        color: #f1f1f1;
+        width: inherit;
+        transition: 0.5s rota;
+        opacity: 0;
+        color: white;
+        padding: 20px 0px 20px 0px;
+        text-align: center;
+      }
+
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+      }
+
+      .overlay h3 {
+        font-size: 20px;
+      }
+
+      .overlay h5 {
+        font-size: 16px;
+      }
+
+      .overlay a {
+        color: #fff;
+      }
+
+      .cont-image:hover img {
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        transition: 0.3s ease-in-out;
+        /* border-radius: 50%; */
+      }
+
+      .cont-image:hover .overlay {
+        opacity: 1;
+        /* border-radius: 50%; */
+        transition: 0.3s ease-in-out;
+      }
+
+      @media (max-width: 576px) {
         .cont-grid li {
-            width: 250px;
-            height: 250px;
-            display: inline-block;
-            margin: 50px 50px;
+          margin: 45px auto;
         }
-        
-        .user {
-            color: white;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            position: relative;
-            cursor: default;
-        }
-        
-        .cont-image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .cont-image img {
-            width: 100%;
-            height: 100%;
-            /* border-radius: 10%; */
-        }
-        
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.3);
-            color: #f1f1f1;
-            width: inherit;
-            transition: .5s rota;
-            opacity: 0;
-            color: white;
-            padding: 20px 0px 20px 0px;
-            text-align: center;
-        }
-        
-        .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-        }
-        
-        .overlay h3 {
-            font-size: 20px;
-        }
-        
-        .overlay h5 {
-            font-size: 16px;
-        }
-        
-        .overlay a {
-            color: #fff;
-        }
-        
-        .cont-image:hover img {
-            filter: blur(5px);
-            -webkit-filter: blur(5px);
-            transition: .3s ease-in-out;
-            /* border-radius: 50%; */
-        }
-        
-        .cont-image:hover .overlay {
-            opacity: 1;
-            /* border-radius: 50%; */
-            transition: .3s ease-in-out;
-        }
-        
-        @media(max-width: 576px) {
-            .cont-grid li {
-                margin: 45px auto;
-            }
-        }
-        /* //Team Page */
+      }
+      /* //Team Page */
     </style>
+  </head>
 
-</head>
-
-<body>
-
-    <input type="checkbox" id="navcheck" role="button" title="menu">
+  <body>
+    <input type="checkbox" id="navcheck" role="button" title="menu" />
 
     <label for="navcheck" aria-hidden="true" title="menu">
-        <span class="burger">
-            <span class="bar">
-                <span class="visuallyhidden">Menu</span>
-            </span>
+      <span class="burger">
+        <span class="bar">
+          <span class="visuallyhidden">Menu</span>
         </span>
+      </span>
     </label>
 
     <nav id="menu" style="z-index: 20">
-        <a href="./index.html">Home</a>
-        <a href="./event/event.html">Events</a>
-        <!--<a href="./workshops.html">Workshops</a>-->
-        <a href="./team.html">Team</a>
-        <!--<a href="https://ifestbackend.herokuapp.com/#/login">Login</a>
+      <a href="./index.html">Home</a>
+      <a href="./event/event.html">Events</a>
+      <!--<a href="./workshops.html">Workshops</a>-->
+      <a href="./team.html">Team</a>
+      <!--<a href="https://ifestbackend.herokuapp.com/#/login">Login</a>
         <a href="./register.html">Register</a>-->
-        <a href="./sponsors.html">Sponsors</a>
-        <a href="./gallery.html">Gallery</a>
-        <a href="./contactUs.html">Contact Us</a>
-        <ul class="social-medi">
-          <li>
-            <a href="https://instagram.com/i.fest" target="_blank"
-              ><i class="fa fa-instagram" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/ifestdaiict/" target="_blank"
-              ><i class="fa fa-facebook" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li>
-            <a href="mailto:ifest@daiict.ac.in" target="_blank"
-              ><i class="fa fa-envelope" aria-hidden="true"></i
-            ></a>
-          </li>
-        </ul>
-      </nav>
-
+      <a href="./sponsors.html">Sponsors</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./contactUs.html">Contact Us</a>
+      <ul class="social-medi">
+        <li>
+          <a href="https://instagram.com/i.fest" target="_blank"
+            ><i class="fa fa-instagram" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/ifestdaiict/" target="_blank"
+            ><i class="fa fa-facebook" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="mailto:ifest@daiict.ac.in" target="_blank"
+            ><i class="fa fa-envelope" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
 
     <main data-router-wrapper>
-        <section data-router-view="team" class="team">
-            <div class="page-title">
-                <h1>Team</h1>
+      <section data-router-view="team" class="team">
+        <div class="page-title">
+          <h1>Team</h1>
+        </div>
+
+        <div class="page-title">
+          <h2>PR & Marketing</h2>
+        </div>
+        <ul class="cont-grid">
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/12.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Devanshu Vithlani</h3>
+                    <h5>PR & Marketing</h5>
+                    <h5><a href="tel:+919714533000">+91 97145 33000</a></h5>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <ul class="cont-grid">
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/9.jpeg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Rahil Patel</h3>
-                                    <h5>Mentor</h5>
-                                    <h5><a href="tel:+919375962477">+91 93759 62477</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/DarshakPatel-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Darshak Patel</h3>
-                                    <h5>Mentor</h5>
-                                    <h5><a href="tel:+919904939083">+91 99049 39083</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/5.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Yashvi Shah</h3>
-                                    <h5>Mentor</h5>
-                                    <h5><a href="tel:+919725035934">+91 97250 35934</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/6.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Harsh Patel</h3>
-                                    <h5>Mentor</h5>
-                                    <h5><a href="tel:+917990252119">+91 79902 52119</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-
-            <div class="page-title">
-                <h2>PR & Marketing</h2>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/siddarth.heic" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Siddarth Rathod</h3>
+                    <h5>PR & Marketing</h5>
+                    <h5><a href="tel:+917046098218">+91 70460 98218</a></h5>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="cont-grid">
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/12.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Devanshu Vithlani</h3>
-                                    <h5>PR & Marketing</h5>
-                                    <h5><a href="tel:+919714533000">+91 97145 33000</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/siddarth.heic">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Siddarth Rathod</h3>
-                                    <h5>PR & Marketing</h5>
-                                    <h5><a href="tel:+917046098218">+91 70460 98218</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/ashish-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Ashish Dhami</h3>
-                                    <h5>PR & Marketing</h5>
-                                    <h5><a href="tel:+918460675802">+91 84606 75802</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/jeelfaldu-min.jpeg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Jeel Faldu</h3>
-                                    <h5>PR & Marketing</h5>
-                                    <h5><a href="tel:+919328003106">+91 93280 03106</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/ashish-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Ashish Dhami</h3>
+                    <h5>PR & Marketing</h5>
+                    <h5><a href="tel:+918460675802">+91 84606 75802</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/jeelfaldu-min.jpeg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Jeel Faldu</h3>
+                    <h5>PR & Marketing</h5>
+                    <h5><a href="tel:+919328003106">+91 93280 03106</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-
-            <!--<div class="page-title">
+        <!--<div class="page-title">
                 <h2>Designing</h2>
             </div>
             <ul class="cont-grid">
@@ -362,265 +308,318 @@
                 </li>
             </ul>-->
 
-
-
-            <div class="page-title">
-                <h2>Sponsorship</h2>
+        <div class="page-title">
+          <h2>Sponsorship</h2>
+        </div>
+        <ul class="cont-grid">
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/16.JPG" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Madhavendra Choksi</h3>
+                    <h5>Sponsorship</h5>
+                    <h5><a href="tel:+919924230332">+91 99242 30332</a></h5>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="cont-grid">
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/16.JPG">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Madhavendra Choksi</h3>
-                                    <h5>Sponsorship</h5>
-                                    <h5><a href="tel:+919924230332">+91 99242 30332</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/14.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Devynai Panchal</h3>
-                                    <h5>Sponsorship</h5>
-                                    <h5><a href="tel:+919824413747">+91 98244 13747</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/fenil-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Fenil Kamdar</h3>
-                                    <h5>Sponsorship</h5>
-                                    <h5><a href="tel:+919825206109">+91 98252 06109</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/Prabhav-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Prabhav Shah</h3>
-                                    <h5>Sponsorship</h5>
-                                    <h5><a href="tel:+919106505620">+91 91065 05620</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/jaimit-joshi-min.jpeg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Jaimit Joshi</h3>
-                                    <h5>Sponsorship</h5>
-                                    <h5><a href="tel:+919327035369">+91 93270 35369</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-            
-            <div class="page-title">
-                <h2>Event Management</h2>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/Devyani.jpeg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Devynai Panchal</h3>
+                    <h5>Sponsorship</h5>
+                    <h5><a href="tel:+919824413747">+91 98244 13747</a></h5>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="cont-grid">
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/visaj-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Visaj Shah</h3>
-                                    <h5>Event Management</h5>
-                                    <h5><a href="tel:+918141764794">+91 81417 64794</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/karan-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Karan Bhatia</h3>
-                                    <h5>Event Management</h5>
-                                    <h5><a href="tel:+919409498216">+91 94094 98216</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/nirmit-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Nirmit Ghughu</h3>
-                                    <h5>Event Management</h5>
-                                    <h5><a href="tel:+918380901222">+91 83809 01222</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/rinkal-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Rinkal Naik</h3>
-                                    <h5>Event Management</h5>
-                                    <h5><a href="tel:+917069670451">+91 70696 70451</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/mohildesai-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Mohil Desai</h3>
-                                    <h5>Event Management</h5>
-                                    <h5><a href="tel:+919106709058">+91 91067 09058</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-
-            <div class="page-title">
-                <h2>Web and App Development Team</h2>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/fenil-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Fenil Kamdar</h3>
+                    <h5>Sponsorship</h5>
+                    <h5><a href="tel:+919825206109">+91 98252 06109</a></h5>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="cont-grid">
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/meetpatel-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Meet Patel</h3>
-                                    <h5>Web Development</h5>
-                                    <h5><a href="tel:+919586156902">+91 95861 56902</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/hitesh-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Hitesh Goyal</h3>
-                                    <h5>Web Development</h5>
-                                    <h5><a href="tel:+918950125175">+91 89501 25175</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/Adit-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Adit Shah</h3>
-                                    <h5>Web Development</h5>
-                                    <h5><a href="tel:+919723285800">+91 97232 85800</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/deven-min.jpeg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Deven Vachhani</h3>
-                                    <h5>App Development</h5>
-                                    <h5><a href="tel:+919824978996">+91 98249 78996</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-            </ul>
-
-            <div class="page-title">
-                <h2>Content Writing and Graphic Designing</h2>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/Prabhav-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Prabhav Shah</h3>
+                    <h5>Sponsorship</h5>
+                    <h5><a href="tel:+919106505620">+91 91065 05620</a></h5>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul class="cont-grid">
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/DarshilShah-min.jpg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Darshil Shah</h3>
-                                    <h5>Content Writing</h5>
-                                    <h5><a href="tel:+918320475542">+91 83204 75542</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="user">
-                        <div class="cont-image">
-                            <img src="images/team/yash.jpeg">
-                            <div class="overlay">
-                                <div class="text">
-                                    <h3>Yash Chaudhari</h3>
-                                    <h5>Graphic Designing</h5>
-                                    <h5><a href="tel:+919726009423">+91 97260 09423</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/jaimit-joshi-min.jpeg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Jaimit Joshi</h3>
+                    <h5>Sponsorship</h5>
+                    <h5><a href="tel:+919327035369">+91 93270 35369</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-        </section>
+        <div class="page-title">
+          <h2>Event Management</h2>
+        </div>
+        <ul class="cont-grid">
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/visaj-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Visaj Shah</h3>
+                    <h5>Event Management</h5>
+                    <h5><a href="tel:+918141764794">+91 81417 64794</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/karan-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Karan Bhatia</h3>
+                    <h5>Event Management</h5>
+                    <h5><a href="tel:+919409498216">+91 94094 98216</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/nirmit-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Nirmit Ghughu</h3>
+                    <h5>Event Management</h5>
+                    <h5><a href="tel:+918380901222">+91 83809 01222</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/rinkal-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Rinkal Naik</h3>
+                    <h5>Event Management</h5>
+                    <h5><a href="tel:+917069670451">+91 70696 70451</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/mohildesai-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Mohil Desai</h3>
+                    <h5>Event Management</h5>
+                    <h5><a href="tel:+919106709058">+91 91067 09058</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="page-title">
+          <h2>Web and App Development Team</h2>
+        </div>
+        <ul class="cont-grid">
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/meetpatel-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Meet Patel</h3>
+                    <h5>Web Development</h5>
+                    <h5><a href="tel:+919586156902">+91 95861 56902</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/hitesh-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Hitesh Goyal</h3>
+                    <h5>Web Development</h5>
+                    <h5><a href="tel:+918950125175">+91 89501 25175</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/Adit-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Adit Shah</h3>
+                    <h5>Web Development</h5>
+                    <h5><a href="tel:+919723285800">+91 97232 85800</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/deven-min.jpeg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Deven Vachhani</h3>
+                    <h5>App Development</h5>
+                    <h5><a href="tel:+919824978996">+91 98249 78996</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="page-title">
+          <h2>Content Writing and Graphic Designing</h2>
+        </div>
+        <ul class="cont-grid">
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/DarshilShah-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Darshil Shah</h3>
+                    <h5>Content Writing</h5>
+                    <h5><a href="tel:+918320475542">+91 83204 75542</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/yash.jpeg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Yash Chaudhari</h3>
+                    <h5>Graphic Designing</h5>
+                    <h5><a href="tel:+919726009423">+91 97260 09423</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="page-title">
+          <h2>Mentors</h2>
+        </div>
+        <ul class="cont-grid">
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/Rahil.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Rahil Patel</h3>
+                    <h5>Mentor</h5>
+                    <h5><a href="tel:+919375962477">+91 93759 62477</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/DarshakPatel-min.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Darshak Patel</h3>
+                    <h5>Mentor</h5>
+                    <h5><a href="tel:+919904939083">+91 99049 39083</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/5.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Yashvi Shah</h3>
+                    <h5>Mentor</h5>
+                    <h5><a href="tel:+919725035934">+91 97250 35934</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="user">
+              <div class="cont-image">
+                <img src="images/team/6.jpg" />
+                <div class="overlay">
+                  <div class="text">
+                    <h3>Harsh Patel</h3>
+                    <h5>Mentor</h5>
+                    <h5><a href="tel:+917990252119">+91 79902 52119</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
 
-
-
     <script src="./js/index.js"></script>
-</body>
-
+  </body>
 </html>
